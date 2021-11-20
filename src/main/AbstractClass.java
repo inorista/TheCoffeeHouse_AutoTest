@@ -10,7 +10,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class AbstractClass {
+public abstract class AbstractClass {
 	public ChromeDriver driver;
 	public ChromeOptions options;
 	public static String url = "https://thecoffeehouse.com/";

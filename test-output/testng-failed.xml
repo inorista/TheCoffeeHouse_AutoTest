@@ -3,14 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="main.moveToPolicySite">
+      <class name="main.findStoreByAddress">
         <methods>
-          <include name="checkMovedPolicySite"/>
           <include name="launchBrowser"/>
-          <include name="clickDropdownStep"/>
+          <include name="checkStoreDisplayed"/>
+          <include name="beforeTest"/>
           <include name="closeBrowser"/>
+          <include name="findStore_step"/>
+          <include name="afterTest"/>
         </methods>
-      </class> <!-- main.moveToPolicySite -->
+      </class> <!-- main.findStoreByAddress -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

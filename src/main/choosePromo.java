@@ -12,8 +12,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-
-import pageObject.orderPage;
 import pageObject.promoPage;
 
 import java.io.File;
@@ -58,7 +56,7 @@ public class choosePromo {
 		driver.get(url);
 	}
 	@Test(priority = 0)
-	public void choosePromo_step() {
+	public void choosePromo_step() throws InterruptedException {
 		objPromoPage = new promoPage(driver, wait);
 		objPromoPage.openPromoForm();
 		objPromoPage.choosePromo(promo);

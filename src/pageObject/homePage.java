@@ -15,6 +15,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -78,6 +79,7 @@ public class homePage {
     
     public void checkCurrentSitePolicy(String previousSite) {
     	String currentSite = driver.getCurrentUrl();
+    	System.out.print(currentSite);
     	expectedResult = true;
     	if(currentSite.equals("https://thecoffeehouse.com/policy") && !currentSite.equals(previousSite)) {
     		actualResult = true;
@@ -94,6 +96,9 @@ public class homePage {
     }
     
     public void checkCurrentSiteGOV(String previousSite) {
+    	ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
+    	driver.switchTo().window(tabs2.get(1));
+    	wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("title-section")));
     	String currentSite = driver.getCurrentUrl();
     	expectedResult = true;
     	if(currentSite.equals("http://online.gov.vn/Home/WebDetails/48042?AspxAutoDetectCookieSupport=1") && !currentSite.equals(previousSite)) {

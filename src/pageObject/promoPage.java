@@ -28,7 +28,7 @@ public class promoPage {
  	public String description_promo;
  	
     ///////Promo Form
-    @FindBy(xpath = "//a[@class='nav-link p-0' and text()='Khuyến mãi']")
+    @FindBy(xpath = "//li[@class='nav-item  p-0']")
     WebElement openPromoForm;
     
     ///////Promos Container

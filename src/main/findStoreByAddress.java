@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.Scanner;
 import javax.lang.model.element.Element;
 @Listeners(main.ListenerTest.class)
-public class findStoreByAddress {
+public class findStoreByAddress{
 	
 	public String expectedTitle, actualTitle;
 	public String url = "https://thecoffeehouse.com/";
